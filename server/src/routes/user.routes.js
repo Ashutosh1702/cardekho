@@ -3,7 +3,7 @@ import {
   deleteUser,
   logout,
   register,
-} from "../Controllers/user.controller.js";
+} from "../controllers/user.controller.js";
 import { authentication } from "../middlewares/user.middleware.js";
 import {
   loginController,
