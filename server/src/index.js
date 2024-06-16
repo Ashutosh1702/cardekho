@@ -1,13 +1,10 @@
-import express from "express";
-import dotenv from "dotenv";
-import cors from "cors";
-import connectDB from "./src/config/db.js";
-import userRouter from "./src/routes/user.routes.js";
 import cookieParser from "cookie-parser";
-import carsRouter from "./src/routes/car.route.js";
-import { authentication } from "./src/middlewares/user.middleware.js";
-
-dotenv.config();
+import cors from "cors";
+import express from "express";
+import connectDB from "./config/db.js";
+import { authentication } from "./middlewares/user.middleware.js";
+import carsRouter from "./routes/car.route.js";
+import userRouter from "./routes/user.routes.js";
 
 const app = express();
 
@@ -16,13 +13,10 @@ app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 
+connectDB();
+
 // Routes
 app.use("/api", userRouter);
-// app.use("/api/job", jobRouter);
-// app.use("/api/company", companyRouter);
-// app.use("/api/skills", skillRouter);
-// app.use("/api/category", categoryRouter);
-// app.use("/api/apply", applyRouter);
 app.use("/api/cars", carsRouter);
 app.use("/api/verify-auth", authentication, (req, res) => {
   const user = req?.user;
@@ -36,7 +30,6 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
-  connectDB();
   console.log(`Server is listening on port ${PORT}`);
 });
 
