@@ -1,5 +1,3 @@
-![IMG_20240602_125956598_HDR~2](https://github.com/Ashutosh1702/cardekho-app/assets/128836160/8e649236-9aa9-4e91-a412-c7c2eaa6461d)
-
 # CarDekho
 
 The "cardekho-app" is a project aimed at creating a web application inspired by the functionality and features of CarDekho, an Indian online platform for buying and selling cars. The app serves as a simplified clone or prototype that allows users to explore car listings, view car details, and possibly perform other related actions such as comparing models, checking prices, and more.
