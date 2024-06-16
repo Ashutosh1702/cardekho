@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "../config/axios";
 import { Navigate, Outlet } from "react-router-dom";
 
 function HomePage() {
@@ -12,7 +12,7 @@ function HomePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/cars");
+        const response = await axios.get("/api/cars");
 
         if (response.status === 200) {
           const data = response.data;

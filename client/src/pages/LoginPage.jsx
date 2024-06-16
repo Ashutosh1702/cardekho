@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../config/axios";
 import React, { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/api/login", {
+      const response = await axios.post("/api/login", {
         email,
         password,
       });
