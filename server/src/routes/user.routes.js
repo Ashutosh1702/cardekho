@@ -4,11 +4,11 @@ import {
   logout,
   register,
 } from "../controllers/user.controller.js";
-import { authentication } from '../middlewares/user.middleware.js';
+import { authentication } from "../middlewares/user.middleware.js";
 import {
   loginController,
   signupController,
-} from "../Controllers/auth.controller.js";
+} from "../controllers/auth.controller.js";
 
 const userRouter = express.Router();
 
