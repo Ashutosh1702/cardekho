@@ -8,6 +8,7 @@ import userRouter from "./routes/user.routes.js";
 
 const app = express();
 
+console.log(process.env.ALLOWED_ORIGIN);
 // Middlewares
 app.use(express.json());
 app.use(
