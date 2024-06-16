@@ -13,7 +13,7 @@ console.log(process.env.ALLOWED_ORIGIN);
 app.use(express.json());
 app.use(
   cors({
-    origin: process.env.ALLOWED_ORIGIN,
+    origin: "*",
   })
 );
 app.use(cookieParser());
